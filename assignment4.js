@@ -10,6 +10,7 @@ function cubeNumber(number) {
 }
 
 
+
 function matchFinder(string1, string2) {
 
     if(typeof string1 !== 'string' || typeof string2 !== 'string'){
@@ -32,7 +33,7 @@ function sortMaker(arr) {
 
     const temp = [2];
 
-    if (arr[0] > 0 && arr[1] > 0) {
+    if (arr[0] >= 0 && arr[1] >= 0) {
         if (arr[0] > arr[1]) {
             return arr;
         }
@@ -47,6 +48,37 @@ function sortMaker(arr) {
     }
     else{
         return 'Invalid Input';
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+function canPay(changeArray, totalDue) {
+
+    if(changeArray === undefined || changeArray.length==0){
+        return 'You entered empty Array.'
+    }
+    else{
+
+
+    let sum = 0;
+    for (let i = 0; i < changeArray.length; i++) {
+        const index = changeArray[i];
+        sum = sum + index;
+    }
+    if (sum >= totalDue) {
+        return true;
+    }else{
+        return false;
+    }
     }
 
 }
