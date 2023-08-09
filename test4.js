@@ -112,34 +112,34 @@
 
         // console.log(index);
             //  console.log(sum);
-// function canPay(changeArray, totalDue) {
+function canPay(changeArray, totalDue) {
 
-//     if(changeArray === undefined || changeArray.length==0){
-//         return 'You entered empty Array.'
-//     }
-//     else{
+    if(changeArray === undefined || changeArray.length==0){
+        return 'You entered empty Array.'
+    }
+    else{
 
 
-//     let sum = 0;
-//     for (let i = 0; i < changeArray.length; i++) {
-//         const index = changeArray[i];
-//         sum = sum + index;
-//     }
-//     if (sum >= totalDue) {
-//         return true;
-//     }else{
-//         return false;
-//     }
-//     }
+    let sum = 0;
+    for (let i = 0; i < changeArray.length; i++) {
+        const index = changeArray[i];
+        sum = sum + index;
+    }
+    if (sum >= totalDue) {
+        return true;
+    }else{
+        return false;
+    }
+    }
 
-// }
+}
 
-// const x = [1,2,5];
-// const m = 10;
-// const y = [1, 5, 5];
-// const n = 10;
+const x = [1,2,5];
+const m = 10;
+const y = [1, 5, 5];
+const n = 10;
 
-// const checkOutput = canPay(x,m);
-// const checkOutput1 = canPay(y,n);
-// console.log(checkOutput);
-// console.log(checkOutput1);
+const checkOutput = canPay(x,m);
+const checkOutput1 = canPay(y,n);
+console.log(checkOutput);
+console.log(checkOutput1);
