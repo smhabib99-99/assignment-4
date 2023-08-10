@@ -92,11 +92,40 @@
 
 // }
 
-//  x = {street:10, house:"15A", society:"Earth Perfect"};
+// let x = {street:10, house:"15A", society:"Earth Perfect"};
 // const checkOutput = findAddress(x);
 // console.log(checkOutput);
 
 
+
+
+
+//  problem #04 Again try.
+// ========================================
+
+        // console.log(street, house, society);
+
+function findAddress(obj) {
+
+    if(typeof obj !== 'object'){
+        return 'please enter object type input.'
+    }
+    else{
+        const street = obj.street || "__";
+        const house = obj.house || "__";
+        const society = obj.society || "__";
+        return street+ "," +house+","+society;
+    }
+}
+
+let object = {
+    street:10,
+    house:"15A",
+    society:"Earth Perfect"
+};
+const address = findAddress(object);
+
+console.log(address);
 
 
 
@@ -112,34 +141,39 @@
 
         // console.log(index);
             //  console.log(sum);
-function canPay(changeArray, totalDue) {
+// function canPay(changeArray, totalDue) {
 
-    if(changeArray === undefined || changeArray.length==0){
-        return 'You entered empty Array.'
-    }
-    else{
+//     if(changeArray === undefined || changeArray.length==0){
+//         return 'You have entered empty Array.';
+//     }
+//     else{
 
 
-    let sum = 0;
-    for (let i = 0; i < changeArray.length; i++) {
-        const index = changeArray[i];
-        sum = sum + index;
-    }
-    if (sum >= totalDue) {
-        return true;
-    }else{
-        return false;
-    }
-    }
+//     let sum = 0;
+//     for (let i = 0; i < changeArray.length; i++) {
+//         const index = changeArray[i];
+//         sum = sum + index;
+//     }
+//     if (sum >= totalDue) {
+//         return true;
+//     }else{
+//         return false;
+//     }
+//     }
 
-}
+// }
 
-const x = [1,2,5];
-const m = 10;
-const y = [1, 5, 5];
-const n = 10;
+// const x = [1,2,5];
+// const m = 10;
+// const y = [1, 5, 5];
+// const n = 10;
 
-const checkOutput = canPay(x,m);
-const checkOutput1 = canPay(y,n);
-console.log(checkOutput);
-console.log(checkOutput1);
+// const z = [];
+// const o = 10;
+
+// const checkOutput = canPay(x,m);
+// const checkOutput1 = canPay(y,n);
+// const checkOutput2 = canPay(z,o);
+// console.log(checkOutput);
+// console.log(checkOutput1);
+// console.log(checkOutput2);

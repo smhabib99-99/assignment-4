@@ -11,6 +11,7 @@ function cubeNumber(number) {
 
 
 
+
 function matchFinder(string1, string2) {
 
     if(typeof string1 !== 'string' || typeof string2 !== 'string'){
@@ -56,6 +57,20 @@ function sortMaker(arr) {
 
 
 
+function findAddress(obj) {
+
+    if(typeof obj !== 'object'){
+        return 'please enter object type input.'
+    }
+    else{
+        const street = obj.street || "__";
+        const house = obj.house || "__";
+        const society = obj.society || "__";
+        return street+ "," +house+","+society;
+    }
+}
+
+
 
 
 
@@ -64,7 +79,7 @@ function sortMaker(arr) {
 function canPay(changeArray, totalDue) {
 
     if(changeArray === undefined || changeArray.length==0){
-        return 'You entered empty Array.'
+        return 'You have entered empty Array.';
     }
     else{
 
